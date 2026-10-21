@@ -170,7 +170,7 @@ La presente investigación se clasifica dentro de un alcance explicativo y corre
 
 \textbf{H$_{1b}$:} los estudiantes que responden la encuesta mediante el chatbot de Telegram presentan una tasa de finalización mayor que los que la responden mediante el formulario web estático.
 
-\textbf{H$_{0b}$:} no existe diferencia en la tasa de finalización entre los estudiantes que responden por chatbot de Telegram y por formulario web.
+\textbf{H$_{0b}$:} no existe diferencia en la tasa de finalización entre los estudiantes que responden por chatbot de Telegram y por formulario web. 
 
 \section{Variables}
 
@@ -225,6 +225,46 @@ En el marco del diseño experimental planteado, las variables de estudio se clas
 
 \subsection{Marco Teórico Conceptual}
 
+El marco teórico de este proyecto se apoya en tres cuerpos teóricos, organizados de lo general a lo específico. Primero, la teoría de la carga cognitiva y del \textit{satisficing}, que explica por qué los respondientes abandonan o responden con poco esfuerzo un instrumento. Segundo, la teoría de la respuesta social (paradigma CASA), que explica por qué una interfaz conversacional podría modificar el compromiso del respondiente. Tercero, el Modelo de Aceptación de Tecnología (TAM), que explica cómo se forma la usabilidad percibida de un canal. Cada teoría respalda una de las preguntas específicas de la formulación del problema.
+
+\subsubsection{Carga cognitiva y \textit{satisficing} en la respuesta a encuestas}
+
+La teoría de la carga cognitiva parte de que la memoria de trabajo es limitada y distingue tres tipos de carga: la intrínseca (propia de la tarea), la extrínseca (impuesta por el diseño de la interfaz) y la pertinente (dedicada a construir esquemas) \cite{sweller1994}. Aplicada a las encuestas, esta distinción permite entender el esfuerzo del respondiente como una carga que puede aumentar o reducirse según cómo se presente el instrumento. La investigación reciente sobre carga del respondiente en encuestas web indica que el esfuerzo, tanto objetivo como percibido, influye en la calidad de las respuestas \cite{kunz2025}, y que las fuentes de dificultad de una pregunta pueden detectarse en el comportamiento de interacción del usuario \cite{leipold2025}. Además, la medición de la carga cognitiva en la interacción humano-computador es un campo consolidado, con métodos y métricas disponibles \cite{kosch2023}.
+
+Sobre esta base, la teoría del \textit{satisficing} sostiene que, cuando la tarea exige más esfuerzo del que el respondiente está dispuesto o es capaz de dar, este recurre a atajos: omitir preguntas, responder sin diferenciar entre ítems o abandonar el cuestionario \cite{krosnick1991}. Indicadores como las preguntas omitidas y la diferenciación entre ítems se han usado para comparar la calidad de los datos de encuestas por chatbot y por formulario web \cite{beam2023}.
+
+En este proyecto, la teoría orienta la interpretación de las variables $VD_1$ (tasa de finalización), $VD_2$ (tiempo de diligenciamiento) y $VD_4$ (tasa de abandono). Un formulario estático presenta todo el instrumento a la vez, mientras que el chatbot lo fragmenta pregunta a pregunta. Esta diferencia puede reducir la carga extrínseca percibida y, con ello, el abandono, pero también puede añadir carga si la navegación resulta menos intuitiva. La teoría no predice por sí sola el sentido del efecto, y por eso el diseño del estudio debe poder mostrar cualquiera de los dos desenlaces.
+
+\subsubsection{Teoría de la respuesta social (CASA)}
+
+El paradigma \textit{Computers Are Social Actors} (CASA), formulado por Nass y Moon, plantea que las personas aplican de forma automática reglas sociales a los sistemas computacionales que interactúan con ellas \cite{nass2000}. Este paradigma es el fundamento sobre el que se diseñan los agentes conversacionales sociales, aunque su alcance ha sido cuestionado: replicaciones recientes sugieren que el efecto no es universal y depende del tipo de tecnología y de la experiencia previa del usuario \cite{heyselaar2023}.
+
+Dentro de este marco, Gnewuch et al. \cite{gnewuch2022} mostraron que las señales sociales de un chatbot, como su tiempo de respuesta, influyen en la presencia social percibida y en la intención de uso, y que ese efecto depende de si el usuario ya tiene experiencia con chatbots.
+
+Para este proyecto, la teoría aporta dos ideas. La primera es que el estilo de interacción del bot (turnos de conversación, tono, tiempos de respuesta) es una decisión de diseño con consecuencias sobre el compromiso del participante, lo que respalda la primera pregunta específica sobre cómo diseñar el prototipo. La segunda es que el efecto del chatbot no tiene por qué ser homogéneo: puede variar según la familiaridad de los estudiantes con Telegram y con los chatbots. Esto fundamenta la inclusión del perfil del participante como variable de control y la formulación de las hipótesis $H_{1a}$ y $H_{1b}$.
+
+\subsubsection{Modelo de Aceptación de Tecnología (TAM) y usabilidad percibida}
+
+El TAM, propuesto por Davis, establece que la intención de usar una tecnología depende principalmente de la utilidad percibida y de la facilidad de uso percibida \cite{davis1989}. Estudios recientes con estudiantes universitarios siguen empleándolo para explicar la aceptación de chatbots, y reportan que la utilidad percibida suele ser el predictor más fuerte, mientras que la facilidad de uso actúa en buena parte de forma indirecta \cite{tam2026}.
+
+En el contexto de las encuestas, esta teoría ayuda a interpretar por qué la evaluación del usuario puede divergir del desempeño objetivo. Zarouali et al. \cite{zarouali2023} observaron que un chatbot de encuestas fue evaluado menos favorablemente en disfrute, utilidad y seguridad percibidos que el formulario web, y que sus efectos sobre la calidad de datos no fueron superiores.
+
+Para este proyecto, el TAM fundamenta la variable $VD_3$ (usabilidad percibida, medida con la escala SUS) y la tercera pregunta específica. Un canal puede aumentar la participación sin ser percibido como más usable, y viceversa. Por eso el estudio mide ambas dimensiones por separado.
+
+\subsubsection{Relación entre las teorías y las preguntas específicas}
+
+\begin{table}[htbp]
+\centering
+\caption{Correspondencia entre teorías, preguntas específicas y variables}
+\small
+\begin{tabular}{|p{4cm}|p{4.5cm}|p{3.5cm}|}
+\hline
+\textbf{Teoría} & \textbf{Pregunta específica que respalda} & \textbf{Variables} \\ \hline
+Carga cognitiva y \textit{satisficing} & Pregunta 2: diferencias en finalización, abandono y tiempo & $VD_1$, $VD_2$, $VD_4$ \\ \hline
+Respuesta social (CASA) & Pregunta 1: diseño del chatbot; efecto según experiencia previa & VI, variables de control \\ \hline
+TAM & Pregunta 3: usabilidad percibida y experiencia de usuario & $VD_3$ \\ \hline
+\end{tabular}
+\end{table}
 Este apartado define los conceptos centrales que orientan el estudio y que se emplean de manera consistente en las secciones siguientes.
  
 \subsubsection{Chatbot y Bot de Telegram}
