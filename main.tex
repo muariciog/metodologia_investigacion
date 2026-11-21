@@ -494,35 +494,196 @@ Tiempo ($VD_2$) y usabilidad ($VD_3$) & U de Mann-Whitney, o t de Welch si se cu
 Con el tamaño de muestra previsto, el ajuste por las variables de perfil (por ejemplo, mediante regresión logística) se plantea solo como análisis exploratorio.
 
 \paragraph{Consideraciones éticas.} La participación es voluntaria y se solicita consentimiento informado al inicio de ambos canales. El bot identifica a cada participante con un código anonimizado, y los reportes presentan resultados agregados, tal como se describe en el marco ético y legal.
-\section{Resultados y Discusión}
 
-En esta sección se presentan los hallazgos obtenidos tras la recolección de datos, orientados a responder las preguntas de investigación y contrastar las hipótesis planteadas. Los datos aquí expuestos corresponden a los registros capturados mediante el formulario web (Grupo de Control), evaluando el perfil de los participantes, las tasas de respuesta y finalización, el tiempo de diligenciamiento y la usabilidad percibida.
+\section{Resultado}
+
+En esta sección se presentan los hallazgos obtenidos con los dos canales de recolección: el formulario web estático (grupo de control) y el chatbot de Telegram (grupo experimental). Los resultados se organizan para responder las preguntas de investigación y contrastar las hipótesis planteadas, evaluando el perfil de los participantes, las tasas de respuesta, finalización y abandono, el tiempo de diligenciamiento y la usabilidad percibida.
+
+\subsection{Datos analizados}
+
+\paragraph{Formulario web.} Los registros provienen de la plataforma del formulario: 54 visualizaciones (\textit{views}), 25 intentos iniciados (\textit{starts}) y 14 encuestas completadas. Los resultados completos se presentan en el Anexo~B.
+
+\paragraph{Chatbot de Telegram.} El bot registró de forma automática 17 intentos entre el 19 y el 20 de noviembre de 2026 (9 el primer día y 8 el segundo). En los análisis se cuentan todos los registros de la tabla de resultados, que se presenta en el Anexo~A: 11 intentos completados y 6 abandonados, de los cuales 4 se cerraron por tiempo de espera agotado (inactividad) y 2 por cancelación explícita del participante.
 
 \subsection{Caracterización de la Muestra}
-A partir de los 14 registros de encuestas completadas ($N=14$), se caracterizó el perfil demográfico y tecnológico de los respondientes. En su gran mayoría, los participantes pertenecen a la Facultad de Ingeniería (85,7\,\%), seguidos por Ciencias Económicas y Administrativas (7,1\,\%) y Derecho y Ciencias Sociales (7,1\,\%). La población encuestada se concentró principalmente en los semestres de inicio e intermedios (semestres 3 y 4).
 
-En cuanto a los hábitos digitales, el 71,4\,\% de los usuarios (10 de 14) diligenció el formulario utilizando un dispositivo móvil (celular), mientras que una minoría lo hizo desde un computador (21,4\,\%) o tablet (7,1\,\%). Frente a la familiaridad con el canal conversacional propuesto para el grupo experimental, el 57,1\,\% afirmó usar Telegram de forma \textit{ocasional}, un 28,6\,\% indicó no usarlo \textit{nunca}, y el resto reportó un uso semanal o diario. Esta caracterización evidencia una alta adopción de dispositivos móviles para procesos académicos, pero una familiaridad moderada-baja con Telegram como herramienta de uso cotidiano.
+\paragraph{Formulario web.} A partir de los 14 registros de encuestas completadas ($N=14$) se caracterizó el perfil de los respondientes. En su gran mayoría pertenecen a la Facultad de Ingeniería (85,7\,\%), seguidos por Ciencias Económicas y Administrativas (7,1\,\%) y Derecho y Ciencias Sociales (7,1\,\%), y se concentraron en los semestres 3 y 4. El 71,4\,\% (10 de 14) diligenció el formulario desde un dispositivo móvil, el 21,4\,\% desde un computador y el 7,1\,\% desde una tablet. Respecto a la familiaridad con el canal propuesto, el 57,1\,\% usa Telegram de forma ocasional, el 28,6\,\% nunca lo usa y el resto lo usa semanalmente o a diario.
+
+\paragraph{Chatbot de Telegram.} En los 17 intentos del bot, 11 (64,7\,\%) provienen de la Facultad de Ingeniería, 2 de Ciencias de la Salud, 2 de Estudios a Distancia, 1 de Ciencias Básicas y 1 de Ciencias Económicas y Administrativas. La mediana del semestre fue 4 (rango de 3 a 9). Once intentos (64,7\,\%) se realizaron desde un celular, 3 desde un computador y 3 desde una tablet. En cuanto al uso de Telegram, de los 16 intentos con respuesta a esta pregunta, 5 (31,3\,\%) corresponden a participantes que no lo usan nunca, 4 (25,0\,\%) a quienes lo usan ocasionalmente y 7 (43,8\,\%) a quienes lo usan semanalmente o a diario.
+
+\begin{table}[htbp]
+\centering
+\caption{Perfil de los participantes por canal y comparabilidad de los grupos}
+\label{tab:perfil}
+\small
+\begin{tabular}{|p{4.2cm}|p{2.9cm}|p{2.9cm}|p{3.6cm}|}
+\hline
+\textbf{Característica} & \textbf{Formulario ($n=14$)} & \textbf{Bot ($n=17$)} & \textbf{Prueba} \\ \hline
+Facultad: Ingeniería & 85,7\,\% (12) & 64,7\,\% (11) & Fisher, $p=0{,}24$ \\ \hline
+Dispositivo: celular & 71,4\,\% (10) & 64,7\,\% (11) & Fisher, $p=1{,}00$ \\ \hline
+Telegram: nunca / ocasionalmente / semanal o a diario & 28,6\,\% (4) / 57,1\,\% (8) / 14,3\,\% (2) & 31,3\,\% (5) / 25,0\,\% (4) / 43,8\,\% (7) ($n=16$) & Permutación, $p\approx0{,}13$ \\ \hline
+\end{tabular}
+
+\vspace{0.2cm}
+{\footnotesize El perfil del formulario corresponde a las encuestas completadas; el del bot, a todos los intentos registrados. Para el uso de Telegram se empleó un valor $p$ exacto por permutaciones, porque varias frecuencias esperadas son menores que 5.}
+\end{table}
+
+Ninguna de las diferencias de perfil resultó estadísticamente significativa (Tabla~\ref{tab:perfil}), por lo que los grupos pueden considerarse comparables en facultad, dispositivo y uso de Telegram. Aun así, el bot reunió una proporción mayor de usuarios frecuentes de Telegram (43,8\,\% semanal o diario, frente a 14,3\,\% en el formulario), diferencia que se retoma en la discusión.
 
 \subsection{Tasas de Respuesta, Finalización y Abandono}
-El análisis del comportamiento de interacción con el formulario web arrojó métricas clave asociadas a las variables dependientes $VD_1$, $VD_4$ y $VD_5$. Según los registros de la plataforma, el instrumento tuvo un total de 54 visualizaciones (\textit{views}), de las cuales 25 se convirtieron en intentos iniciados (\textit{starts}). Esto representa una \textbf{tasa de respuesta del 46,3\,\%} respecto a los usuarios que abrieron el enlace.
 
-Por otro lado, de los 25 intentos iniciados, 14 lograron llegar hasta la confirmación de envío. Esto sitúa la \textbf{tasa de finalización ($VD_1$) en un 56,0\,\%}. De manera complementaria, se registró una \textbf{tasa de abandono ($VD_4$) del 44,0\,\%}. El análisis de caída (\textit{drop-off analysis}) indica que la deserción temprana ocurrió predominantemente en los ítems iniciales de perfilamiento sociodemográfico (como la elección de facultad y el semestre), experimentando una tasa de rebote (\textit{bounce rate}) inicial elevada del 53,7\,\%.
+\paragraph{Formulario web.} El análisis del formulario arrojó métricas asociadas a las variables $VD_1$, $VD_4$ y $VD_5$. El instrumento tuvo 54 visualizaciones, de las cuales 25 se convirtieron en intentos iniciados, lo que representa una \textbf{tasa de respuesta del 46,3\,\%} respecto a los usuarios que abrieron el enlace. De los 25 intentos iniciados, 14 llegaron hasta la confirmación de envío, de modo que la \textbf{tasa de finalización ($VD_1$) fue de 56,0\,\%} y la \textbf{tasa de abandono ($VD_4$) de 44,0\,\%}. El análisis de caída (\textit{drop-off analysis}) indica que la deserción ocurrió predominantemente en los ítems iniciales de perfilamiento sociodemográfico (como la elección de facultad y el semestre), con una tasa de rebote (\textit{bounce rate}) inicial de 53,7\,\%.
 
-Estos resultados establecen la línea base del comportamiento en el canal tradicional. La finalización del 56\,\% indica que, si bien una proporción considerable logra terminar el proceso, casi la mitad de quienes inician la encuesta experimentan fricción suficiente para abandonarla prematuramente.
+\paragraph{Chatbot de Telegram.} De los 17 intentos registrados, 11 llegaron a la confirmación de envío, lo que equivale a una \textbf{tasa de finalización ($VD_1$) de 64,7\,\%} y a una \textbf{tasa de abandono ($VD_4$) de 35,3\,\%} (6 intentos). Cuatro abandonos se produjeron por inactividad y dos por cancelación explícita. Los abandonos se distribuyeron en las preguntas 1, 4, 6, 7, 12 y 13, con uno en cada una; los cancelados corresponden a las preguntas 4 y 6, y los cerrados por inactividad a las preguntas 1, 7, 12 y 13.
+
+\paragraph{Tasa de respuesta ($VD_5$) en el bot.} El bot registró los intentos iniciados, pero no se llevó un conteo de personas invitadas ni de aperturas del enlace del bot, que es el denominador que exige la definición de $VD_5$. Por esta razón la tasa de respuesta del chatbot no puede calcularse y no es comparable con el 46,3\,\% del formulario.
+
+\begin{table}[htbp]
+\centering
+\caption{Tasas de respuesta, finalización y abandono por canal}
+\label{tab:finalizacion}
+\small
+\begin{tabular}{|p{5cm}|p{4.2cm}|p{4.2cm}|}
+\hline
+\textbf{Indicador} & \textbf{Formulario} & \textbf{Bot} \\ \hline
+Intentos iniciados & 25 & 17 \\ \hline
+Encuestas completadas & 14 & 11 \\ \hline
+Tasa de finalización ($VD_1$) & 56,0\,\% & 64,7\,\% \\ \hline
+Tasa de abandono ($VD_4$) & 44,0\,\% & 35,3\,\% \\ \hline
+Tasa de respuesta ($VD_5$) & 46,3\,\% (25 de 54 visualizaciones) & No calculable \\ \hline
+Punto de abandono & Ítems iniciales de perfil & Preguntas 1, 4, 6, 7, 12 y 13 \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Tiempo de Diligenciamiento y Usabilidad Percibida}
-El registro automático de las marcas de tiempo determinó que el \textbf{tiempo promedio de diligenciamiento ($VD_2$)} para las 14 encuestas completadas fue de \textbf{4 minutos y 20 segundos}. Este valor evidencia una carga temporal moderada para un instrumento de 20 preguntas bajo una interfaz estática. 
 
-Para evaluar la \textbf{usabilidad percibida ($VD_3$)}, se procesaron las respuestas a los 10 ítems de la escala \textit{System Usability Scale} (SUS). Aplicando la regla de ponderación estandarizada, se obtuvo un puntaje global promedio de \textbf{73,39 sobre 100} (Desviación Estándar = 13,61). Los puntajes oscilaron entre un mínimo de 50 y un máximo de 100 puntos. Según la interpretación clásica del SUS, un puntaje promedio de 73,39 se ubica ligeramente por encima de la media de usabilidad aceptable (68 puntos), lo que sugiere que, para aquellos usuarios que lograron superar la barrera del abandono (sesgo de supervivencia), el formulario web se percibió como un medio relativamente claro y fácil de usar, sin presentar fallos críticos de interfaz.
+\paragraph{Formulario web.} El registro automático de las marcas de tiempo determinó que el \textbf{tiempo promedio de diligenciamiento ($VD_2$)} de las 14 encuestas completadas fue de \textbf{4 minutos y 20 segundos}. Para la \textbf{usabilidad percibida ($VD_3$)} se procesaron los 10 ítems de la escala SUS y se obtuvo un puntaje promedio de \textbf{73,39 sobre 100} (desviación estándar = 13,61), con valores entre 50 y 100.
+
+\paragraph{Chatbot de Telegram.} El tiempo se calcula solo sobre intentos completados. Para los 11 intentos completados, el tiempo promedio fue de 152,6 segundos (2 minutos y 33 segundos; desviación estándar = 65,2; mediana = 141,4 s; rango de 71,4 a 252,3 s). La usabilidad percibida, con la misma regla de cálculo del SUS, tuvo un promedio de 73,64 (desviación estándar = 17,94; mediana = 75,0; rango de 45 a 97,5). La consistencia interna de la escala en el bot, estimada con el alfa de Cronbach, fue de 0,84.
+
+\begin{table}[htbp]
+\centering
+\caption{Tiempo de diligenciamiento y usabilidad percibida (SUS) por canal}
+\label{tab:tiempo-sus}
+\small
+\begin{tabular}{|p{5cm}|p{4.2cm}|p{4.2cm}|}
+\hline
+\textbf{Indicador} & \textbf{Formulario} & \textbf{Bot} \\ \hline
+Encuestas completadas & 14 & 11 \\ \hline
+Tiempo promedio ($VD_2$) & 4 min 20 s (260 s) & 2 min 33 s (152,6 s) \\ \hline
+Mediana del tiempo & --- & 141,4 s \\ \hline
+SUS promedio ($VD_3$) (DE) & 73,39 (13,61) & 73,64 (17,94) \\ \hline
+SUS mínimo -- máximo & 50 -- 100 & 45 -- 97,5 \\ \hline
+Comparación del SUS (t de Welch) & \multicolumn{2}{c|}{$p=0{,}97$} \\ \hline
+\end{tabular}
+
+\vspace{0.2cm}
+{\footnotesize ---: dato no reportado. La prueba t de Welch se calculó a partir de la media, la desviación estándar y el tamaño de cada grupo.}
+\end{table}
+
+El bot presentó un tiempo promedio menor que el formulario (aproximadamente 107 segundos menos); esta diferencia se reporta de forma descriptiva, ya que el tiempo es una variable complementaria sin hipótesis formal. El puntaje SUS fue prácticamente idéntico en ambos canales (73,64 frente a 73,39) y en los dos supera el valor de referencia de 68 puntos.
+
+\subsection{Actitud hacia las Encuestas Institucionales}
+
+Las preguntas 6 a 10 se responden antes de la escala SUS, por lo que en el bot fueron contestadas por los 11 intentos completados. La disposición a responder encuestas de la universidad (pregunta 6) tuvo un promedio de 3,64 sobre 5 y la facilidad percibida de las encuestas actuales (pregunta 8) un promedio de 3,73. El principal motivo para dejar una encuesta sin terminar fue que es muy larga (5 de 11), seguido por otros motivos (2), y por preguntas repetitivas o confusas, problemas técnicos, falta de interés en el tema y no dejar nunca encuestas sin terminar (uno cada uno). Respecto al medio preferido para recibir encuestas institucionales (pregunta 9), 4 participantes eligieron la plataforma web de la universidad, 2 el correo institucional, 2 Telegram, 2 WhatsApp y 1 las redes sociales.
+
+\subsection{Contraste de Hipótesis}
+
+Para $H_{1b}$, la tasa de finalización se comparó con la prueba z de dos proporciones (unilateral, $\alpha=0{,}05$), pues todas las frecuencias esperadas son mayores o iguales que 5, y se calculó el intervalo de confianza del 95\,\% de la diferencia (método de Newcombe). La tasa de finalización del bot (64,7\,\%, 11 de 17) fue 8,7 puntos porcentuales mayor que la del formulario (56,0\,\%, 14 de 25), con un intervalo de confianza del 95\,\% de $-20{,}4$ a $34{,}8$ puntos y un valor $p=0{,}286$. La hipótesis $H_{1a}$ no pudo contrastarse porque no se registró el denominador de la tasa de respuesta del bot.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultado del contraste de hipótesis}
+\label{tab:hipotesis}
+\small
+\begin{tabular}{|p{1.6cm}|p{9.2cm}|p{3.5cm}|}
+\hline
+\textbf{Hipótesis} & \textbf{Resultado} & \textbf{Decisión} \\ \hline
+$H_{1a}$ & Tasa de respuesta del bot no calculable (sin registro de invitados ni de aperturas del enlace) & No contrastada \\ \hline
+$H_{1b}$ & 64,7\,\% (bot) frente a 56,0\,\% (formulario); diferencia de 8,7 pp, IC 95\,\% de $-20{,}4$ a $34{,}8$; prueba z unilateral $p=0{,}286$ & No se rechaza $H_{0b}$ \\ \hline
+\end{tabular}
+\end{table}
+
+La dirección de la diferencia coincide con la hipótesis de trabajo, pero el intervalo de confianza incluye el valor cero, por lo que los datos no permiten rechazar la hipótesis nula de igualdad en la finalización.
 
 \subsection{Discusión}
-Los hallazgos de esta fase de control son consistentes con la literatura referenciada. El hecho de que la gran mayoría de los encuestados haya accedido desde un dispositivo móvil confirma la premisa de Harley et al. \cite{harley2007} sobre la prioridad del ecosistema móvil en la comunidad estudiantil. No obstante, la tasa de abandono documentada del 44,0\,\% respalda empíricamente la problemática descrita por Hoerger \cite{hoerger2010} y Nielsen \cite{nielsen1990}, corroborando que los formularios web estáticos, al presentarse de manera tradicional y pasiva, generan una carga extrínseca capaz de propiciar la deserción temprana.
 
-Cabe resaltar el contraste entre la moderada retención de usuarios y el buen puntaje de usabilidad (SUS = 73,39) evaluado por quienes sí finalizaron. Este fenómeno apoya lo sugerido por Zarouali et al. \cite{zarouali2023} y la Teoría de la Aceptación de la Tecnología (TAM): un instrumento puede ser técnicamente fácil de usar para quienes tienen la disposición de completarlo, pero aun así carecer de la interactividad inmediata necesaria para retener al grueso de los usuarios iniciales. Los datos consolidados servirán como un punto de referencia robusto para estimar el verdadero efecto de integración y reducción de fricción una vez se contrasten con las métricas arrojadas por la intervención conversacional en Telegram (Grupo Experimental).
+La finalización fue mayor en el chatbot (64,7\,\%) que en el formulario (56,0\,\%), en la misma dirección que reportan Xiao et al. \cite{xiao2020} y Beam \cite{beam2023}. Sin embargo, la diferencia observada (8,7 puntos) es mucho menor que la de Xiao et al. (54\,\% frente a 24,2\,\%) y no es estadísticamente significativa, de manera que los resultados son compatibles con la ausencia de ventaja estadísticamente demostrable del chatbot que encontraron Zarouali et al. \cite{zarouali2023}. Este resultado se suma a la falta de consenso que ya presentaba la literatura y justificaba la contrastación local.
+
+El comportamiento del abandono difiere entre los canales. En el formulario la deserción se concentró en los primeros ítems de perfilamiento (rebote inicial de 53,7\,\%), mientras que en el bot los abandonos se distribuyeron a lo largo del instrumento (preguntas 1, 4, 6, 7, 12 y 13, estas dos últimas dentro de la escala SUS) y la mayoría se produjo por inactividad y no por cancelación. Esto es consistente con la idea de que presentar las preguntas una a una puede reducir la carga extrínseca percibida al inicio del instrumento \cite{sweller1994, nielsen1990}. Para el formulario, la tasa de abandono de 44,0\,\% respalda la problemática descrita por Hoerger \cite{hoerger2010} y la necesidad de retroalimentación y de indicadores de progreso señalada por Nielsen y Molich \cite{nielsen1990}. Además, el principal motivo declarado para abandonar encuestas fue su extensión (5 de 11), lo que coincide con lo que reporta Hoerger sobre la relación entre longitud y deserción.
+
+En cuanto al tiempo, el bot fue más rápido en promedio (2 minutos y 33 segundos frente a 4 minutos y 20 segundos). Este resultado contrasta con los estudios de te Pas et al. \cite{tepas2020} y de Çavuşoğlu Deveci et al. \cite{devecifuchs2026}, que no hallaron diferencias relevantes en el tiempo de finalización o de respuesta.
+
+La usabilidad percibida fue prácticamente igual entre canales: el SUS promedio fue de 73,39 en el formulario y de 73,64 en el bot, ambos por encima de los 68 puntos y sin diferencia significativa. Este resultado es compatible con el Modelo de Aceptación de Tecnología \cite{davis1989}, según el cual la aceptación de un canal no depende únicamente de su facilidad de uso percibida, sino también de su utilidad percibida: un canal puede ser evaluado como usable por quienes lo completan sin que ello determine por sí solo cuántas personas deciden participar.
+
+Por último, el bot reunió una proporción mayor de usuarios frecuentes de Telegram (43,8\,\% semanal o diario, frente a 14,3\,\% en el formulario), aunque la diferencia no fue significativa. Esto es relevante porque Gnewuch et al. \cite{gnewuch2022} encontraron que el efecto de las señales de un chatbot depende de la experiencia previa del usuario. Por otra parte, el 64,7\,\% de los intentos del bot y el 71,4\,\% de las respuestas del formulario se hicieron desde un celular, lo que coincide con la prioridad que la comunidad estudiantil otorga a los canales móviles \cite{harley2007}. En conjunto, los datos de ambos canales ofrecen a la UPTC una estimación del efecto del canal de recolección sobre la finalización, el tiempo y la usabilidad percibida, con la dirección favorable al chatbot en finalización y tiempo, pero sin una diferencia estadísticamente significativa.
 
 \printbibliography[title={Bibliografía}]
 
 \section*{Anexos}
-Texto aquí...
+
+\subsection*{Anexo A. Resultados del chatbot de Telegram}
+
+Los datos del chatbot se registraron de forma automática en el archivo de Excel \texttt{Resultados\_\allowbreak Telegram\_\allowbreak Bot.xlsx}, que se adjunta como anexo digital a este informe. El archivo tiene dos hojas: \textit{Respuestas}, con un registro por intento (identificador del intento, código anonimizado del participante, fecha y hora de inicio y de fin, indicador de finalización, duración en segundos, pregunta donde abandonó, estado de cierre, respuestas a las preguntas 1 a 10, ítems de la escala SUS y puntaje SUS), y \textit{Resumen}, con los indicadores globales del experimento. La Tabla~\ref{tab:anexo-bot} resume los 17 intentos registrados.
+
+\begin{table}[htbp]
+\centering
+\caption{Intentos registrados por el chatbot de Telegram (19 y 20 de noviembre de 2026)}
+\label{tab:anexo-bot}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|l|c|r|l|c|r|}
+\hline
+\textbf{N.°} & \textbf{ID de intento} & \textbf{Inicio} & \textbf{Completó} & \textbf{Duración (s)} & \textbf{Cierre} & \textbf{Abandono en} & \textbf{SUS} \\ \hline
+1 & \texttt{470eac24bcf5b373} & 19/11 11:10 & Sí & 71,44 & completado & --- & 45 \\ \hline
+2 & \texttt{7fce4274b046e1db} & 19/11 11:22 & Sí & 232,75 & completado & --- & 97,5 \\ \hline
+3 & \texttt{d690c0ba666d58af} & 19/11 11:44 & No & 672,45 & cancel & P6 & --- \\ \hline
+4 & \texttt{deffa6720741a597} & 19/11 11:51 & No & 944,04 & timeout & P1 & --- \\ \hline
+5 & \texttt{a352a7a42a9c931b} & 19/11 12:49 & Sí & 189,70 & completado & --- & 87,5 \\ \hline
+6 & \texttt{8480084bf30ca856} & 19/11 13:44 & No & 64,27 & cancel & P4 & --- \\ \hline
+7 & \texttt{b9d304da630787be} & 19/11 15:58 & Sí & 126,83 & completado & --- & 67,5 \\ \hline
+8 & \texttt{1afdf6e3fe5a40f1} & 19/11 21:47 & No & 1108,88 & timeout & P12 & --- \\ \hline
+9 & \texttt{8fa96329c3dbf641} & 19/11 23:36 & Sí & 90,25 & completado & --- & 72,5 \\ \hline
+10 & \texttt{c41949cef458af3e} & 20/11 18:19 & Sí & 219,84 & completado & --- & 50 \\ \hline
+11 & \texttt{99e488f2f2d72cc7} & 20/11 19:58 & Sí & 74,54 & completado & --- & 52,5 \\ \hline
+12 & \texttt{c14e620a076e0bd6} & 20/11 20:01 & Sí & 175,31 & completado & --- & 87,5 \\ \hline
+13 & \texttt{0c0c5e04ec1b1318} & 20/11 20:22 & Sí & 141,42 & completado & --- & 85 \\ \hline
+14 & \texttt{df8d1ab77d7f8cb7} & 20/11 20:21 & Sí & 252,33 & completado & --- & 75 \\ \hline
+15 & \texttt{0d06e74779f55f15} & 20/11 20:46 & No & 974,35 & timeout & P13 & --- \\ \hline
+16 & \texttt{3d6613d66d2e1317} & 20/11 21:16 & No & 942,79 & timeout & P7 & --- \\ \hline
+17 & \texttt{a615898dbd8aa104} & 20/11 21:45 & Sí & 104,53 & completado & --- & 90 \\ \hline
+\end{tabular}}
+
+\vspace{0.2cm}
+{\footnotesize Cierre: \textit{completado}, \textit{cancel} (cancelación explícita) o \textit{timeout} (tiempo de espera agotado). SUS: puntaje de 0 a 100, solo para intentos completados.}
+\end{table}
+
+\subsection*{Anexo B. Resultados del formulario web}
+
+Los resultados del formulario web se pueden observar en el archivo csv \texttt{Resultados\_\allowbreak Formulario\_\allowbreak Web.csv} anexado igualmente con este informe. La Tabla~\ref{tab:anexo-form} consolida los indicadores obtenidos. La exportación completa de la plataforma se adjunta como anexo digital.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultados consolidados del formulario web}
+\label{tab:anexo-form}
+\small
+\begin{tabular}{|p{8cm}|p{5cm}|}
+\hline
+\textbf{Indicador} & \textbf{Valor} \\ \hline
+Visualizaciones del formulario & 54 \\ \hline
+Intentos iniciados & 25 \\ \hline
+Encuestas completadas & 14 \\ \hline
+Tasa de respuesta ($VD_5$, sobre visualizaciones) & 46,3\,\% \\ \hline
+Tasa de finalización ($VD_1$) & 56,0\,\% \\ \hline
+Tasa de abandono ($VD_4$) & 44,0\,\% \\ \hline
+Tasa de rebote inicial & 53,7\,\% \\ \hline
+Tiempo promedio de diligenciamiento ($VD_2$) & 4 min 20 s \\ \hline
+Puntaje SUS promedio ($VD_3$) & 73,39 (DE = 13,61) \\ \hline
+Puntaje SUS mínimo -- máximo & 50 -- 100 \\ \hline
+Facultad de Ingeniería & 85,7\,\% (12 de 14) \\ \hline
+Dispositivo móvil & 71,4\,\% (10 de 14) \\ \hline
+Uso de Telegram: ocasional / nunca & 57,1\,\% / 28,6\,\% \\ \hline
+\end{tabular}
+\end{table}
 
 \end{document}
